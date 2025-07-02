@@ -1,0 +1,125 @@
+body {
+  color: #d7e0ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 100%;
+  height: 250px; /* Altura ajustada */
+  background-color: rgba(27, 2, 46, 0.87);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.2rem;
+}
+
+main {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  margin: 0.2rem auto;
+  text-align: center;
+}
+
+.pomodoro {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #231532;
+  box-shadow: inset 0 0 10px #ffffff;
+}
+
+.pomodoro::before {
+  content: "";
+  position: absolute;
+  border: 3px solid royalblue;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.time,
+.timer-display {
+  font-size: 1.4rem !important;
+  margin: 0;
+  z-index: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+}
+
+.button,
+#start,
+#stop,
+#restart {
+  background-color: #2e325a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+#stop:hover {
+  background-color: tomato;
+}
+
+#start:hover {
+  background-color: #219a52;
+}
+
+#restart:hover {
+  background-color: #ffc107;
+}
+
+.button.active,
+.button:hover {
+  background-color: #020323;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+  .container {
+    transform: scale(0.9);
+  }
+
+  .timer {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
