@@ -17,14 +17,14 @@ body {
   padding: 0.5rem;
   width: 100%;
   height: 250px; /* Altura ajustada */
-  background-color: rgba(27, 2, 46, 0.87);
+  background-color: rgba(47, 2, 91, 0.795);
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
   box-sizing: border-box;
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0.2rem 0;
 }
 
@@ -84,7 +84,7 @@ main {
 #start,
 #stop,
 #restart {
-  background-color: #2e325a;
+  background-color: #14173a;
   color: #fff;
   border: none;
   border-radius: 5px;

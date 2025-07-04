@@ -7,37 +7,68 @@
   box-sizing: border-box;
 }
 
-/* Corpo da página com imagem de fundo */
+/* GRID: TAREFAS À ESQUERDA, RESTO À DIREITA */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Blocos principais */
+.tasks-wrapper,
+.timer-wrapper,
+.youtube-wrapper,
+.spotify-wrapper {
+  border-radius: 20px;
+  padding: 1rem;
+  min-height: 300px;
+  width: 100%;
+}
+
+/* Seção direita (Pomodoro + YouTube) */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Corpo com fundo */
 body {
   background-image: url("../images/fundo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  padding: 2rem; /* margem interna nas bordas */
+  padding: 2rem;
+  color: #e5f9ff;
 }
 
-/* Grade principal dos blocos */
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  max-width: 1100px; /* Largura máxima menor para manter margens laterais */
-  margin: 0 auto; /* Centraliza na tela */
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-/* Blocos individuais */
-.timer-wrapper,
-.spotify-wrapper,
-.tasks-wrapper,
-.youtube-wrapper {
+/* Vídeo responsivo com bordas arredondadas */
+.video-container {
   width: 100%;
-  height: 250px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-/* Responsividade para telas menores */
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Títulos gerais */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #e5f9ff;
+}
+
+/* Responsivo: mobile */
 @media screen and (max-width: 768px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
@@ -45,14 +76,15 @@ body {
     padding: 1rem;
   }
 
-  .timer-wrapper,
-  .spotify-wrapper,
+  .right-column {
+    flex-direction: column;
+  }
+
   .tasks-wrapper,
-  .youtube-wrapper {
-    height: 250px;
+  .timer-wrapper,
+  .youtube-wrapper,
+  .spotify-wrapper {
+    min-height: 280px;
     margin-bottom: 1rem;
   }
 }
-
-
-

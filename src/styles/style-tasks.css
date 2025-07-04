@@ -1,10 +1,10 @@
-/* Envolvendo o bloco de tasks */
+/* Estilo do bloco de tarefas */
 #to-do {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    background-color: rgba(27, 2, 46, 0.87);
+    background-color: rgba(47, 2, 91, 0.795);
     padding: 18px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
@@ -15,10 +15,12 @@
     font-size: 28px;
 }
 
+/* Formulário de adicionar/editar tarefas */
 .to-do-form {
     display: flex;
     width: 100%;
 }
+
 .to-do-form input {
     background-color: transparent;
     border: none;
@@ -29,11 +31,12 @@
     border-bottom: 2px solid #ee9ca7;
 }
 
-/* Para tirar a borda do imput */
+/* Tirar a borda azul do input ao focar */
 .to-do-form input:focus-visible {
     outline: none;
 }
 
+/* Botão "+" e "check" */
 .to-do-form .form-button {
     border: none;
     min-width: 40px;
@@ -44,45 +47,36 @@
     transition: scale 0.5s ease;
 }
 
-/* Leve aumento dos botões de incluir */
 .to-do-form .form-button:hover {
     cursor: pointer;
     scale: 1.05;
 }
 
-.task .progress {
-    margin-right: 10px;
-}
-
+/* Área que contém todas as tarefas */
 #tasks {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-height: 400px; /* limite de quantidade de tasks antes do scroll */
+    max-height: 400px; /* Scroll após muitas tarefas */
     overflow: auto;
 }
 
+/* Cada tarefa */
 .task {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #262626;
     background-color: #191933;
     padding: 8px 12px;
     border-radius: 4px;
 }
 
-/* Sobre a aba oculta*/
+/* Checkbox da tarefa */
 .task .progress {
     margin-right: 10px;
 }
 
-/* Sobre a aba oculta de editar a task*/
-.task .progress.done + .task-description {
-    text-decoration: line-through;
-    color: #e5f9ffa7;
-}
-
+/* Texto da tarefa */
 .task .task-description {
     font-size: 16px;
     color: #fff;
@@ -90,7 +84,13 @@
     width: 100%;
 }
 
-/* Sobre os botões de apagar e editar */
+/* Quando marcada como concluída (classe adicionada via JS) */
+.task .task-description.done {
+    text-decoration: line-through;
+    color: #e5f9ffa7;
+}
+
+/* Botões de ação (editar, excluir) */
 .task .task-actions {
     display: flex;
     gap: 10px;
@@ -108,14 +108,16 @@
     color: #ee9ca7;
 }
 
-/* Para ocultar a aba oculta de editar a task*/
+/* Ocultar formulários e elementos dinamicamente */
 .hidden {
     display: none !important;
 }
 
+/* Responsivo */
 @media screen and (max-width: 600px) {
     #to-do {
-        width: 100%; 
+        width: 100%;
     }
 }
+
 
