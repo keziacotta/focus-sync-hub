@@ -42,26 +42,4 @@ Este projeto é de uso acadêmico e pessoal. Para uso comercial, entre em contat
 |---------------------|--------------|----------------|
 | HTML5 + CSS3 + JS (jQuery) | PHP 8 | MySQL (via XAMPP) |
 
----
-
-## 🧩 Estrutura de pastas
-
-FocusSync-Hub/
-├── index.php
-├── /actions
-│   ├── create.php
-│   ├── update.php
-│   └── update-progress.php
-├── /database
-│   └── conn.php
-├── /src
-│   ├── /styles
-│   │   ├── style-general.css
-│   │   ├── style-tasks.css
-│   │   └── style-pomodoro.css
-│   ├── /javascript
-│   │   ├── script-tasks.js
-│   │   └── script-pomodoro.js
-│   └── /images
-│       └── fundo.png
 
